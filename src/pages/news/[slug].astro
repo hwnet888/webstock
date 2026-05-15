@@ -22,11 +22,16 @@ if (!fs.existsSync(htmlPath)) {
   htmlPath = path.join(articleDir, "page_1.html");
 }
 if (fs.existsSync(htmlPath)) {
-  const html = fs.readFileSync(htmlPath, "utf-8");
+  let html = fs.readFileSync(htmlPath, "utf-8");
   // Extract content between <div class="container"> and the last </div> before </body>
   const m = html.match(/<div class="container">([\s\S]*?)<\/div>\s*(?:<div|<\/body>)/);
   if (m) {
     innerContent = m[1];
+    // Fix relative links to point to /articles/<slug>/
+    const articleBase = `/articles/${article.slug}/`;
+    innerContent = innerContent
+      .replace(/href="page_(\d+)\.html"/g, `href="${articleBase}page_$1.html"`)
+      .replace(/href="index\.html"/g, `href="${articleBase}"`);
   }
 }
 ---
