@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+import { articleList } from "../../lib/articles";
+---
+
+<BaseLayout title="财经资讯" description="全球财经新闻与市场分析">
+  <section class="hero">
+    <h1>财经资讯</h1>
+    <p>最新全球财经新闻与深度分析</p>
+  </section>
+
+  <section class="section">
+    <div class="article-list">
+      {articleList.map((article) => (
+        <ArticleCard
+          title={article.title}
+          date={new Date(article.date)}
+          slug={article.slug}
+          excerpt={article.excerpt}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

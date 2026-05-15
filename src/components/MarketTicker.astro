@@ -1,0 +1,24 @@
+---
+import { getIndices } from "../lib/api";
+
+const indices = await getIndices();
+
+const tickerItems = [
+  ...indices,
+  ...indices, // duplicate for seamless loop
+];
+---
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    {tickerItems.map((item) => (
+      <span class="ticker-item">
+        <span class="ticker-symbol">{item.symbol}</span>
+        <span class="ticker-price">{item.price.toFixed(2)}</span>
+        <span class={`ticker-change ${item.change >= 0 ? "up" : "down"}`}>
+          {item.change >= 0 ? "+" : ""}{item.changePercent.toFixed(2)}%
+        </span>
+      </span>
+    ))}
+  </div>
+</div>

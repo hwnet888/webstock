@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import { getIndices, getTrendingStocks } from "../lib/api";
+import { articleList } from "../lib/articles";
+
+const indices = await getIndices();
+const trending = await getTrendingStocks();
+
+const latestArticles = articleList.slice(0, 4);
+---
+
+<BaseLayout title="首页" description="WebStock - 全球财经资讯与市场行情">
+  <section class="hero">
+    <h1>全球财经，一手掌握</h1>
+    <p>实时追踪全球市场动态，聚合权威财经资讯，助力投资决策</p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">全球指数</h2>
+    <div class="market-grid">
+      {indices.slice(0, 6).map((idx) => (
+        <div class="market-card">
+          <div class="name">{idx.name}</div>
+          <div class="price">{idx.price.toLocaleString()}</div>
+          <div class={`change ${idx.change >= 0 ? "up" : "down"}`}>
+            {idx.change >= 0 ? "+" : ""}{idx.change.toFixed(2)} ({idx.changePercent >= 0 ? "+" : ""}{idx.changePercent.toFixed(2)}%)
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">热门个股</h2>
+    <div class="market-grid">
+      {trending.map((stock) => (
+        <div class="market-card">
+          <div class="name" title={stock.name}>{stock.symbol}</div>
+          <div class="price">{stock.price.toFixed(2)}</div>
+          <div class={`change ${stock.change >= 0 ? "up" : "down"}`}>
+            {stock.change >= 0 ? "+" : ""}{stock.change.toFixed(2)} ({stock.changePercent >= 0 ? "+" : ""}{stock.changePercent.toFixed(2)}%)
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">最新资讯</h2>
+    <div class="article-list">
+      {latestArticles.map((article) => (
+        <ArticleCard
+          title={article.title}
+          date={new Date(article.date)}
+          slug={article.slug}
+          excerpt={article.excerpt}
+        />
+      ))}
+    </div>
+    <p style="text-align:center;margin-top:1.5rem">
+      <a href="/news">查看全部资讯 &rarr;</a>
+    </p>
+  </section>
+</BaseLayout>

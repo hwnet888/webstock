@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { articles } from "../../lib/articles";
+
+export function getStaticPaths() {
+  return Object.keys(articles).map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const article = articles[slug];
+
+if (!article) {
+  return new Response(null, { status: 404 });
+}
+---
+
+<BaseLayout title={article.title} description={article.title}>
+  <article class="article">
+    <h1>{article.title}</h1>
+    <div class="meta">
+      <time datetime={article.date}>
+        {new Date(article.date).toLocaleDateString("zh-CN", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </time>
+    </div>
+    <div class="content" set:html={article.body} />
+  </article>
+</BaseLayout>
