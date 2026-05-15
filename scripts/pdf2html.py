@@ -131,10 +131,15 @@ def text_to_html(text: str, title: str, date_str: str, page_num: int, total_page
     if total_pages > 1:
         nav_parts = ['  <nav class="pagination">']
         if page_num > 1:
-            nav_parts.append(f'    <a href="page_{page_num - 1}.html">&larr; 上一页</a>')
+            prev = "index.html" if page_num == 2 else f"page_{page_num - 1}.html"
+            nav_parts.append(f'    <a href="{prev}">&larr; 上一页</a>')
+        else:
+            nav_parts.append('    <span></span>')
         nav_parts.append(f'    <span>第 {page_num}/{total_pages} 页</span>')
         if page_num < total_pages:
             nav_parts.append(f'    <a href="page_{page_num + 1}.html">下一页 &rarr;</a>')
+        else:
+            nav_parts.append('    <span></span>')
         nav_parts.append("  </nav>")
         nav = "\n".join(nav_parts)
 
@@ -184,7 +189,7 @@ def text_to_html(text: str, title: str, date_str: str, page_num: int, total_page
 {nav}
 {"\n".join(html_paras)}
 {nav}
-  <div class="back"><a href="index.html">&larr; 返回目录</a></div>
+  <div class="back"><a href="/news">&larr; 返回资讯列表</a></div>
 </div>
 </body>
 </html>"""
