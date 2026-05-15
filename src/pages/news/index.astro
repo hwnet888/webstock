@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
-import { articleList } from "../../lib/articles";
+import { articles } from "../../lib/articles";
 ---
 
 <BaseLayout title="财经资讯" description="全球财经新闻与市场分析">
@@ -12,7 +12,7 @@ import { articleList } from "../../lib/articles";
 
   <section class="section">
     <div class="article-list">
-      {articleList.map((article) => (
+      {articles.map((article) => (
         <ArticleCard
           title={article.title}
           date={new Date(article.date)}

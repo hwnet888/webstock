@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent架构变革的起点 - 第2页</title>
+  <style>
+    :root {
+      --color-bg: #0f1117;
+      --color-surface: #1a1d27;
+      --color-border: #2a2d3a;
+      --color-text: #e1e4ed;
+      --color-text-muted: #8b8fa3;
+      --color-accent: #4da6ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .meta { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border); }
+    p { margin-bottom: 1rem; font-size: 1.05rem; }
+    strong { color: #fff; }
+    .pagination {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--color-border);
+    }
+    .pagination a { color: var(--color-accent); text-decoration: none; }
+    .pagination a:hover { text-decoration: underline; }
+    .pagination span { color: var(--color-text-muted); font-size: 0.9rem; }
+    .back { margin-top: 1rem; text-align: center; }
+    .back a { color: var(--color-accent); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Agent架构变革的起点</h1>
+  <div class="meta">发布时间：2026-05-13 | 第 2/3 页</div>
+  <nav class="pagination">
+    <a href="page_1.html">&larr; 上一页</a>
+    <span>第 2/3 页</span>
+    <a href="page_3.html">下一页 &rarr;</a>
+  </nav>
+  <p>b. 电信和运莒商领域: 可降低机器人本地算力需求,同时优化质检<br>效率，采用事件性 Al 检测模式，Al 持续关注系统运行状态，出<br>现异常突变时主动提醒, 依托 Agent 自带的上下文、权限、身份<br>属性，可调用对应权限主动联系相关人员处理问题，响应速度较<br>传统模式更快;</p>
+  <p>c. 客户服务领域: 可实现用户需求从意图识别到部门/工位分配<br>再到结果返还的全流程高效处理，相较传统生硬的机器人应答模<br>式，可降低 259%人工转接率，缩短 30%-40%回复时间，显著提<br>升用户满意度，减少复杂问题的人工介入需求;</p>
+  <p>d. 供应链物流领域: 依托多 Agent 网状协作的多节点生态，通<br>过Agent 自主协商的方式匹配最优运输路径, 实现多货物同路线<br>打包配送，相较传统数据库匹配模式，可降低 15%-20%运营成<br>本。</p>
+  <p>5、Agent 技术演进核心脉络</p>
+  <p>单 Agent 扩术进代路径: 单 Agent 近术运代沿功能补全与能力<br>优化路径推进: 早期龙虾产品内核为无记忆模块的派，仅新增记<br>忆功能但未做分层,存在记忆混乱、任务丢失、安全性与可监测、<br>可调试性不足的问题.后续返代的 Hermes 实现多维度核心优化:<br>一是落地记忆分层机制, 将记忆划分为 Agent 感知外部交互环境<br>形成的世界记忆，以及 Agent 自身交互过程中产生的主观记忆;<br>二是支持 skill 在任务完成过程中自我和迭代沉淀，早期 skill 均为<br>提前预制的&quot;预制菜&quot;模式,存在 skill 中毒(故意诱导的错误 skil、<br>来源不明易引发系统混乱崩溃的问题，对此 CloudCode 推出了<br>针对 8 万余个 skill 的评分系统，有效解决 skill 来源不可靠的隐<br>患。此外 Hermes 新增反思功能，与用户交互结束后，Agent 仍<br>可在世界知识学畴内异步探索更优解决方案, 实现技能持续精进，<br>最终达到类似自然呼吸的熟练应用状态。</p>
+  <p>-多 Agent 演进的必要性: 单 Agent 以构人存在固有缺陷，仪能履<br>凑简单通用需求,无法文撑复杂精确任务，需向多 Agent 团队化<br>形态演进。 当前通用以构的单 Agent 缺乏垂直领域专属技能与知<br>识储备，容错性薄弱，类比单一内科医生开设的个体诊所，仪能</p>
+  <p>处理输液、售卖感冒药等简单通用需求，无法完成复杂手术这类<br>对专业性、精确度要求极高的任务,这是单 Agent 以构层面的固<br>有狂锋。因此技术演进方向指向多 Agent 协作生态，类比从个体<br>诊所升级为专科医院、三甲医院的逻辑，由不同角色、定位的<br>Agent 组成协作团队，各自承担对应领域专业任务，共同完成复<br>来高精确度的场景需求，从根本上弥补单 Agent 的能力短槐。</p>
+  <p>6、大三布局与俊本押注方向</p>
+  <p>科近大三核心布局: 科技大三在多智能体协作网络领域已开展多<br>项探索实践，微软于会议名开 3 天前推出 Agent 365，明确云昌<br>面环境下 Agent 的启动、运行、结束规则，云桌面 Agent 队列<br>与本地桌面队列互为镜像。LangChain 推出的 LangGraph 是多<br>智能体编排器的和雏形，具备类规则大脑功能，可完整记录 Agent<br>间任务授权、问题解决、结果返还的全流程，类似人类工作授权<br>逻辑, 可为多智能体系统提供清晰的权限、日志与历史记录文撑，<br>有效提升系统可审计性。</p>
+  <p>行业投资轮次与机会: 当前多智能体行业投资处于硬件层优先受<br>益阶段，“卖铲子”的硬件厂商是当前核心受葵方，代表厂商如<br>英伟达; 黄仁勋是本轮 Al 滔潮的最大获答者，其手持充沛现金反<br>向持股多家大模型厂商，还前瞻性收购玻璃六，底层逻辑是多智<br>能体系统运行需海量互联互通数据传输，原有铜线产能与传输能<br>力无法广撑巨量需求，玻璃可用于生产光纤，是核心通信基础设<br>施原材料。当前行业正处于平台层机会窗口期，已有多方布局</p>
+  <p>token 调用入口相天中转站项目，平台层核心机会集中在 token<br>调用入口、数据要素等赛道，待核心生产要素完全明确后，应用<br>层机会将逐步显现。</p>
+  <p>头部机构押注方向: 头部创投机构在多智能体领域的押注方向各<br>有侧重: a. 红杉聚焦 500 强巨头未覆盖的垂直细分赛道，重点<br>布局金融、医疗、供应链、客服等领域的Agent 项目, 采用 MAD<br>护城河框架评估项目，其中 M 指优先拿下目标市场，A 指保障<br>Agent 的可调试性、可审计性，避免架构和迭代时数据混乱难以适<br>配新架构，D 指以快速和迭代能力紧跟技术变化，做随技术滔潮上<br>浮的“船”而非被淹没的“柱子”; b. a16z 侧重布局基础设施<br>与编排平台赛道，相天项目关联硬件、数据及美股上市企业，可<br>直接落地投资动作，建议基金经理重点关注该方向; c. YC 采用<br>批量旷化模式，重点布局消费级 Agent 项目，通过大量试错科选<br>优质标的。</p>
+  <p>7、成熟Agent 架构核心特征</p>
+  <p>.成熟架构核心特性: 成熟 Agent 架构具备编排屋、多端协作、</p>
+  <p>开放协议、友好开发体验、动态化五大核心特征。各特征核心要<br>求与作用如下:</p>
+  <p>a. 清晰编排层: 承担调度、状态管理职能，核心作用是为任务失<br>败兜底，避免任务                         出问题后直<br>接停滞。</p>
+  <p>b. 原生多端协作文持: 微软推出的AutoGen 在 2025 年 12 月</p>
+  <p>推出第二个版本后即停更，核心问题是其串联式架构会逐级放大<br>上游 Agent 的信息偏差，属于拼凑式架构; 成熟架构为广场式意<br>图串联模式，在编排器统一管控下, 多 Agent 可开展多轮分析沟<br>通与观点攻防，基于同一数据源形成共识，避免偏差传导。</p>
+  <p>c. 开放协议绑定: 当前多数 NG 架构采用内部 MCP 协议实现插<br>件调用, 仅支持内部生态资源调取, 未实现 Agent 生态内的开放<br>陌生友现与交易撮合，该能力可充分释放网络效应，是未来核心<br>发展方向。</p>
+  <p>d. 优秀开发者体验: 成熟工具需具备低调用门槛特性，当前<br>LangGraph 虽接近相关要求，但因属于 LangChain 产品系人询，<br>开上友体验不足，且未开源，可观测性存在短板。</p>
+  <p>e. Agent 动态化: Agent 的技能需具备动态迭代能力，例如<br>Hermes 的 skill 可通过后台汉队列开展强化学习优化能力; 同时<br>需配套企业级规则管控 Agent 的启停时机, 避免其过度调用服务<br>器、设备权限或常驻进程，实现 Al 进程动态调度。<br>行业发展节点判断: Agent 行业“从零到一”节点为技术与人类<br>生产生活完全融合的时刻，当前仍处于近术积累阶段。当成熟<br>Agent 以构的五大核心特征全部落地，即以构完全与人类生产生<br>活场景融合、达到&quot;与水面齐平&quot;的状态时，即为行业发展的&quot;从零<br>到一&quot;核心节点,标志着 AlGC 领域完成从无到有的核心突破。当<br>前扩术仍处于演进过程中，判定行业迈入成熟节点的核心信号尚<br>未出现，相关架构尚未达到全场景融合要求，行业整体处于向通</p>
+  <p>用架构演进的技术积累阶段，目前仪完成&quot;从零到零点一&quot;的前期<br>探索，下一个阶段为产品化。</p>
+  <p>8、Agent 行业核心问题答疑</p>
+  <nav class="pagination">
+    <a href="page_1.html">&larr; 上一页</a>
+    <span>第 2/3 页</span>
+    <a href="page_3.html">下一页 &rarr;</a>
+  </nav>
+  <div class="back"><a href="index.html">&larr; 返回目录</a></div>
+</div>
+</body>
+</html>

@@ -2,12 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import { getIndices, getAShareTopGainers } from "../lib/api";
-import { articleList } from "../lib/articles";
+import { articles } from "../lib/articles";
 
 const indices = await getIndices();
 const topGainers = await getAShareTopGainers();
 
-const latestArticles = articleList.slice(0, 4);
+const latestArticles = articles.slice(0, 4);
 ---
 
 <BaseLayout title="首页" description="WebStock - 全球财经资讯与市场行情">

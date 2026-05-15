@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent架构变革的起点 - 第3页</title>
+  <style>
+    :root {
+      --color-bg: #0f1117;
+      --color-surface: #1a1d27;
+      --color-border: #2a2d3a;
+      --color-text: #e1e4ed;
+      --color-text-muted: #8b8fa3;
+      --color-accent: #4da6ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .meta { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border); }
+    p { margin-bottom: 1rem; font-size: 1.05rem; }
+    strong { color: #fff; }
+    .pagination {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--color-border);
+    }
+    .pagination a { color: var(--color-accent); text-decoration: none; }
+    .pagination a:hover { text-decoration: underline; }
+    .pagination span { color: var(--color-text-muted); font-size: 0.9rem; }
+    .back { margin-top: 1rem; text-align: center; }
+    .back a { color: var(--color-accent); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Agent架构变革的起点</h1>
+  <div class="meta">发布时间：2026-05-13 | 第 3/3 页</div>
+  <nav class="pagination">
+    <a href="page_2.html">&larr; 上一页</a>
+    <span>第 3/3 页</span>
+  </nav>
+  <p>.多 Agent 对算力通信的需求: 多 Agent 架构落地将对计算、存<br>储、通信等基础设施产生显著增量需求，其中通信需求增长尤为<br>突出,不同 Agent 之间需频繁传递状态等交互信息,该需求逻辑<br>与黄仁勋收购玻璃三的布局逻辑一致，将直接带动通信、硬件及<br>心片加速相关领域需求扩容。从实际落地场景看，为百人规模企<br>业搭建多 Agent 客户服务矩阵，需采购部署多类核心基础设施:<br>一是云上 GPU 实例, 可选用亚马逊、 微软等厂商的云 GPU 服务;<br>二是事件总线、向量检索工具, 其中向量检索可实现 Agent 实时<br>记忆功能; 三是边缘计算节点支撑分布式运算。上述需求将推动<br>下游客户对云厂商、英伟达等云端加速器厂商、消息及数据厂商<br>产生持续采购与集成需求，多 Agent 架构将带动云 GPU、事件<br>总线、向量检索、边缘计算等基础设施需求大幅增长。</p>
+  <p>技术演进路径与创新主体: Agent 技术演进为渐进式路径，编排<br>加多 Agent 架构与此前的 OpenCloud、Hermes 等阶段性技术<br>弹射点为渐进发展关系, 不会出现完全蔡代原有技术路线的情况。<br>技术将在各节点持续演化，从早期的提示工程，到才盖提示词、<br>技能、Agent 等所有非模型模块的马驹工程，绸到 Agent 技术，<br>低阶技术会被更高阶技术逐步覆盖, 正如 Al 会逐步奉代通用技能，<br>当 AGI 拥有动态能力后，无需额外技能迭代文撑，最终会形成兼</p>
+  <p>有具通用性与落地实用性的统一以构，成为下一个扩术弹射点。当<br>前 Agent 领域创新主体边界尚未明确，Al 技术迭代速度较快 :</p>
+  <p>谷歌大脑联合创始人近期友布广持多模态、实时打断的大模型 ;</p>
+  <p>阿里发布采用 MOE 多专家模式的 33.6 版本 Rim 大模型，可实<br>现随时打断、简单问题调用小参数、复杂占题调用大参数的降本<br>互动效果。 同时 Agent 落地需匹配真实工作流中的权限、安全等<br>要求, 传统软件_.Saas 厂商对复杂流程的 know-how 积累更深，<br>模型厂商也在持续扩张业务边界，两类主体的业务边界尚未明确<br>划定。当前大模型指数型增长已经结束，但在多模态、token 成<br>本优化层面仍有较大发展空间; Al 产品与互联网产品零边际成本<br>特性不同，每新增一个用户束会产生额外运算成本，需相关近术<br>创新文撑降本。当前1DE集成调试工具.可观测性一体化等Agent<br>相关配套能力大三已落地，但出于商业利益考量未开源，例如<br>Cloud Code 已实现 Agent 以构相关功能,但出于商业考量将功<br>能绑定，用户权限较弱;大模型厂商、云厂商已在金融、电信和运<br>莒商、客服、供应链等领域通过驻场工程师形式落地 Agent 相关<br>功能，但未形成通用开源以构，行业有待能打通现有技术、编排<br>整合全链路能力的主体出现，推动通用以构沙地。技术演进为渐<br>进式路径; 当前创新主体边界尚未明确; 大三已实现相关扩术但<br>未对外开源。</p>
+  <p>Q&amp;A</p>
+  <p>Q: Agent 框架的演进方向和沁式是什么”</p>
+  <p>A: Agent 架构正从单体智能向协作生态演进。单 Agent 架构通<br>过引入状态机、规则引警与符号推理等混合架构提升精确性与可<br>靠性,解决移廖决策与安全问题; 多 Agent 生态则依托编排器协<br>调，采用分层协作、网状协作与持续交接三种模式，形成类似综<br>合医院联盟的网络体系，有效缓解上下文污染、规则冲突、可调<br>斌性差、扩展断层及容错性低等瓶颈。OpenCloud 与 Hermes<br>代表单 Agent 阶段的关键弹射点，未来将向编排层加多 Agent<br>协作网络友展，最终实现与人类生产工作环境深度融合的架构形<br>Q: 为什么 Agent 弦构需要从单 Agent 演进到多 Agent 协作网<br>络?</p>
+  <p>A: 单Agent 架构人存在任务丢失、安全性不足、可监测性弱、可<br>调试性差及记忆混乱等问题, 例如龙虾记忆未分层导致远辑冲突，<br>Hermes 虽优化记忆分层与 skill 自我进化能力, 但仍属通用架构，<br>难以履羡医疗、法律等专业领域。多 Agent 协作网络通过编排器<br>统筹多个专业 Agent，模拟综合医院联盟运作，解决上下文注意<br>力误减、规则冲突、上游幻吕在下游放大等缺陷，显著提升复杂<br>任务处理的可靠性、扩展性与容错能力。</p>
+  <p>Q: LangGraph 云图谱实现的主要功能是什么?</p>
+  <p>A:LangGraph 构建了编排器的和雏形，能够清晰记录 Agent 间任<br>务授权、执行路径与结果返还的全流程，提供权限管理、操作日<br>志与历史奶漳能力，接近未来编排层所需的规则大脑，增强任务<br>处理的可审计性与可调试性, 为多 Agent 协作提供结构化调度基<br>础。</p>
+  <p>Q: 编排层加多 Agent 架构对计算资源的需求有何影响?</p>
+  <p>A: 该架构将显著提升对云上 GPU 实例、事件总线、向量检索及<br>边缘计算节点的需求，驱动企业持续采购云服务、英伟达等加速<br>硬件及消息数据中间件。通信和基础设施重要性凸显，参考黄仁勋<br>收购玻璃三布局光纤产能, 以支撑多 Agent 间高频状态传递与网<br>络协同，硬件与通信成为天键文撑环节。</p>
+  <p>Q: 未来的编排层加多 Agent 以构与 OpenCloud、Hermes 等<br>前期扩术是渐进天系还是蔡代关系?</p>
+  <p>A: 属于渐进演化关系。技术节避持续凝结升维, 提示工程.Agent、<br>MKCP 等能力被更高维度态构整合吸收。当 Agent 具备动态 skill<br>进化能力后，预制 Skill 需求将减弱，架构将向通用且高效的方向<br>收敛，形成如鲤鱼般可广泛适配多场景的成熟形态，而非简单蔡<br>代前期扩术。</p>
+  <p>Q: 在Agent 落地过程中, 掌握工作流 know-how 的传统软件公</p>
+  <p>司或 Saags 公司是否会比模型公司发挥更大作用”</p>
+  <p>A: 当前技术边界尚未清晰划定。模型公司在多模态、token 成本<br>优化等领域持续创新; 同时，Cloud Code、OpenAl 等通过驻场<br>工程师将 Agent 深度集成至金融、电信、客服、供应链等垂直领<br>域工作流, Saas 厂商在权限设计、流程合规与领域知识方面具备<br>优势。但因商业壁爸导致通用以构未开源，需整合者突破，创新<br>主体可能向兼具技术理解与行业 know-how 的中厂及垂直领域<br>企业倾禅。</p>
+  <p>Q: Hermes 相比龙虾的主要近术进步体现在哪些方面?</p>
+  <p>A: Hermes 实现记忆分层并赋予 skill 自我进化能力, 通过用户交<br>互后的反思机制与世界知识库持续优化技能, 使 Agent 处理能力<br>趋近呼吸般自然; 而                        龙虾昌引<br>入记忆功能，但未分层易导致混乱，skill 为预制状态且存在 skill<br>中毒风险，Cloud Code 后续推出 8 万+ skil 评分系统以应对该<br>问题。</p>
+  <p>Q: 未来 Agent 架构与人类生产生活完全结合时应具备哪些核心<br>特征?</p>
+  <p>A: 需具备五大特征: 清晰的编排层; 原生文持多端协作; 与开放<br>协议深度绑定; 优秀的开友者体验与可观测性; Agent 动态性。</p>
+  <nav class="pagination">
+    <a href="page_2.html">&larr; 上一页</a>
+    <span>第 3/3 页</span>
+  </nav>
+  <div class="back"><a href="index.html">&larr; 返回目录</a></div>
+</div>
+</body>
+</html>

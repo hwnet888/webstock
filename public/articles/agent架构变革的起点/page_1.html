@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent架构变革的起点 - 第1页</title>
+  <style>
+    :root {
+      --color-bg: #0f1117;
+      --color-surface: #1a1d27;
+      --color-border: #2a2d3a;
+      --color-text: #e1e4ed;
+      --color-text-muted: #8b8fa3;
+      --color-accent: #4da6ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .meta { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border); }
+    p { margin-bottom: 1rem; font-size: 1.05rem; }
+    strong { color: #fff; }
+    .pagination {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--color-border);
+    }
+    .pagination a { color: var(--color-accent); text-decoration: none; }
+    .pagination a:hover { text-decoration: underline; }
+    .pagination span { color: var(--color-text-muted); font-size: 0.9rem; }
+    .back { margin-top: 1rem; text-align: center; }
+    .back a { color: var(--color-accent); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Agent架构变革的起点</h1>
+  <div class="meta">发布时间：2026-05-13 | 第 1/3 页</div>
+  <nav class="pagination">
+    <span>第 1/3 页</span>
+    <a href="page_2.html">下一页 &rarr;</a>
+  </nav>
+  <p>Agent 架构变革的起点 20260513<br>全文摘要<br>1、Agent 市场空间与单 Agent 上发展<br>Agent 演进逻辑与市场空间: Agent 织构的演进可用“打水漂”<br>比喻前释: 行业上展会出现多个技术弹射点，首个弹射点为<br>OpenCloud , 第二个是当前行业热点 Hermes，后续还将涌现更<br>多技术热点，最终进入产业融合的成熟状态，把握整体友展脉络<br>可避免在阶段性行业热潮中迷失。Hermes 的核心特性是让<br>Agent 具备 skill 自我进化能力，用户使用频次越高适配性走强，<br>国内相关近术同步推进, Evenotion Map 团队正开展该领域研皮，<br>近期已推出新产品。当前 Agent 行业整体采用率偏低，2026 年<br>行业采用率将提升至 40%,; 据麦肯锡预测，2030 年 Agent 领域<br>可贡献 2.6-4.4 万亿美元经济价值，行业规模可观，列藏大量投<br>资与商业机遇。1DC 观点显示，Agent 行业总规模将持续增长，<br>发展与通信、数据、硬件等领域高度相关。<br>单Agent 碎构上友展方向: 当前单 Agent 架构仍仓在待完善问题，<br>与大模型缺陷类似, 单 Agent 有时会输出充廖决策,存在安全漏<br>洞，运行可靠性不足。为提升运行精确性，单 Agent 架构的技术<br>迭代方向主要为增加状态机、规则引警、符号推理等模块，通过<br>混合弦构解决现存缺陷。混合弦构可让单 Agent 进入可审计、可<br>奶溯、有权限、有历史的稳定运行状态，可靠性大幅提升，相当</p>
+  <p>于从原来仪配置主刀医生的单一模式，升级为人员配置完整的完<br>善手术团队。</p>
+  <p>2、单Agent 以构核心局限性</p>
+  <p>单 Agent 核心缺陷分析:单 Agent 以构和存在多维度核心局限性，<br>有具体如下:</p>
+  <p>a. 上下文污染问题: 2025 年 10 月 CloudCode 上友布的技术博客<br>显示，在 20 万行代码场景下会出现上下文注意力衰减现象，当<br>上下文长度超过一定阅值后，会出现类似开一整天会的头氏脑胀<br>状态，进而引发注意力分散、跳步骤漏约束、预设规则与意图冲<br>突等问题。</p>
+  <p>b. 任务无法形成有效闭环: 单 Agent 执行任务时，即便依托相<br>关技术具备一定自我编码能力，可做到遇山开路、遇水架桥，但<br>遇到无法突破的场景时，任务会直接被丢弃并呈现失败状态，无<br>法形成良性循环，循环能力需开发者自行补充，目前仅为准生产<br>级产品。</p>
+  <p>c. 可调试性极差: 系统出现问题时, 问题节点隐藏在模糊状态中，<br>难以精准定位排查，调整优化难度极高。</p>
+  <p>d. 扩展断层问题: 通用单 Agent 无法适配医疗、法律等专业领<br>域的需求，架构本                         身折展性存<br>在明显不足。</p>
+  <p>e. 容错率极低: 单 Agent 架构中，上游 Agent 产生的幻党会在<br>中下游无限放大，直接拖垮整条任务链; 即便通过混合架构提升</p>
+  <p>单个Agent 的准确率与可审计性, 也无法解决单硬件本身及多硬<br>件之间的能力缺陷问题。</p>
+  <p>3、多 Agent 生态架构与协作模式</p>
+  <p>-多 Agent 核心架构形态: 多 Agent 核心架构为编排器中枢加多<br>硬件的组合形态, 是多 Agent 体系落地应用的核心基础，可弥补<br>单Agent 存在的性能泪颈.上下文污染.可调试性差等固有缺陷。<br>多硬件可呈现三种不同的协作处理方法, 适配不同业务场景需求<br>其中第一种为分层协作模式，运行逻辑类比科室层级结构，在医<br>疗、金融领域均有适用场景。</p>
+  <p>-多 Agent 三种协作模式: 多 Agent 协作分为分层、网状、持续<br>交接三种模式，多模态方向为扩术最先突破领域:</p>
+  <p>a. 网状协作: 模式类似广场,不同主体可碰撞形成可行路径、产<br>出创间成果，更适配创意类场景。2023 年已率先实现文字、多<br>模态技术突破, 近期 GPT 推出的新图片模型也广受关注，后续有<br>望落地由多云建能文撑的更优多模态产品。合歌大脑一位原创始<br>人已推出多模态产品，具备两大核心功能: 一是广持对话过程随<br>时打断,解决当前大模型输出时仅能暂停、无法实时打断的痛点;<br>二是实现输入输出全链路多模态，当前行业内大模型已普遍实现<br>输入多模态,该产品可进一步支持多模态输出,可生成动态 HTML<br>页面，终极目标是生成影上请，多模态、多 Al 镜头以构是当前扩术<br>突破的核心方向。</p>
+  <p>b. 持续交接: 模式为层级式流转，以东方证券用户反馈处理场景</p>
+  <p>为例, 首先由客服 Al 承接用户意图, 识别到对应技术问题后移交<br>至对应部门的 Agent 拆解任务、解决问题，问题解决后将结果返<br>回至上游客服承接模块，由其转化为用户可理解的语言反馈给用<br>户，该模式也被称为磁吸式处理模式。</p>
+  <p>4、Agent 协议层友展与落地案例</p>
+  <p>Agent 协议层友展现状: 当前 Agent 领域疝未实现与人类生产<br>生活环境的广泛连接，行业存在帮展阶段争议，无法明确当前处<br>于类似1991年 1 月的泡沫膨胀阶段还是接近 1991 年 12 月的朋<br>溃扔点。核心原因在于协议层踢通工作仍在推进，类比古时四川<br>原为大海，经大珊治水开凋三峡才实现水系跻通，目前工具调用<br>层的内部调用环节中 MCP 协议已十分成熟。目前 Agent 协议层<br>已有三类核心协议，定位与适用场景各有差异: MCP 是成熟的内<br>部插件调用协议，相当于系统内部的插件市场，Agent 可直接调<br>用其他主体提供的成熟插件; AtoA 是谷歌提出的 Agent 间同步<br>对话协议，可实现两个Agent 间的状态同步对话; ACP 为异步<br>对话协议。三类协议可协同完成复杂需求，以采购螺丝寻找最低<br>供货价为例: 采购 Agent 首先调用 MCP 查询过往采购记录，再<br>通过开放协议向公共领域广播需求，匹配到各电商平台的询价<br>Agent 并获取报价后，通过 AtoA 协议与报价最低的询价 Agent<br>完成一对一同步对话，即可完成全流程采购。现有协议仍存在痛<br>点，AMP 类协议仅支持通信和功能，无法解决不同 Agent 间的陌<br>生发现、需求撮合问题。目前已有市场主体探索新的协议方案，</p>
+  <p>与NMP 协议方、爱美客、杭州云谷展开合作，针对性解决产业<br>链上下游各 Agent 间的对话与意图报合问题, 该方案将意图量化，<br>可实现不同主体的意图匹配以及意图完成后的消解，但目前该方<br>案尚处于萌芽阶段，未形成像 MCP 一样成熟的调用标准，存在<br>较大发展机会，相关主体正在寻求融资。</p>
+  <p>-多 Agent 行业沙地案例: 目前多 Agent 弦构已企 9aa9 领域头<br>部大厂得到充分应用，包括 Cloud Code、GPT 相关主体在内的<br>头部企业均已派驻驻场工程师进入传统行业推进技术落地，但当<br>前成熟落地扩术尚未开源，暂未实现全行业大学围普及，开源通<br>用架构落地存在明确行业需求. 多 Agent 技术已在四大领域实现<br>落地，降本提效价值明确:</p>
+  <p>a. 银行金融领域: 通过多节点系统可降低交易风险，减少人工处<br>理量;</p>
+  <nav class="pagination">
+    <span>第 1/3 页</span>
+    <a href="page_2.html">下一页 &rarr;</a>
+  </nav>
+  <div class="back"><a href="index.html">&larr; 返回目录</a></div>
+</div>
+</body>
+</html>
