@@ -17,10 +17,7 @@ if (!article) {
 // Read the standalone HTML file and extract body content
 let innerContent = "";
 const articleDir = path.join(process.cwd(), "public", "articles", article.slug);
-let htmlPath = path.join(articleDir, "index.html");
-if (!fs.existsSync(htmlPath)) {
-  htmlPath = path.join(articleDir, "page_1.html");
-}
+const htmlPath = path.join(articleDir, "index.html");
 if (fs.existsSync(htmlPath)) {
   let html = fs.readFileSync(htmlPath, "utf-8");
   // Extract content between <div class="container"> and the last </div> before </body>

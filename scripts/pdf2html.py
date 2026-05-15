@@ -221,7 +221,7 @@ def main():
 
         for i, page_text in enumerate(pages, 1):
             html = text_to_html(page_text, title, date_str, i, total)
-            if total == 1:
+            if i == 1:
                 page_path = article_dir / "index.html"
             else:
                 page_path = article_dir / f"page_{i}.html"
