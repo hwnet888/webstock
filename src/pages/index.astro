@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ArticleCard from "../components/ArticleCard.astro";
-import { getIndices, getTrendingStocks } from "../lib/api";
+import { getIndices, getAShareTopGainers } from "../lib/api";
 import { articleList } from "../lib/articles";
 
 const indices = await getIndices();
-const trending = await getTrendingStocks();
+const topGainers = await getAShareTopGainers();
 
 const latestArticles = articleList.slice(0, 4);
 ---
@@ -17,9 +17,14 @@ const latestArticles = articleList.slice(0, 4);
   </section>
 
   <section class="section">
-    <h2 class="section-title">全球指数</h2>
+    <h2 class="section-title">
+      全球指数
+      {indices.length > 0 && (
+        <span class="timestamp">数据更新于 {indices[0].updatedAt}</span>
+      )}
+    </h2>
     <div class="market-grid">
-      {indices.slice(0, 6).map((idx) => (
+      {indices.map((idx) => (
         <div class="market-card">
           <div class="name">{idx.name}</div>
           <div class="price">{idx.price.toLocaleString()}</div>
@@ -32,11 +37,16 @@ const latestArticles = articleList.slice(0, 4);
   </section>
 
   <section class="section">
-    <h2 class="section-title">热门个股</h2>
+    <h2 class="section-title">
+      A股涨幅榜 TOP5
+      {topGainers.length > 0 && (
+        <span class="timestamp">数据更新于 {topGainers[0].updatedAt}</span>
+      )}
+    </h2>
     <div class="market-grid">
-      {trending.map((stock) => (
+      {topGainers.map((stock) => (
         <div class="market-card">
-          <div class="name" title={stock.name}>{stock.symbol}</div>
+          <div class="name" title={stock.name}>{stock.name}</div>
           <div class="price">{stock.price.toFixed(2)}</div>
           <div class={`change ${stock.change >= 0 ? "up" : "down"}`}>
             {stock.change >= 0 ? "+" : ""}{stock.change.toFixed(2)} ({stock.changePercent >= 0 ? "+" : ""}{stock.changePercent.toFixed(2)}%)
